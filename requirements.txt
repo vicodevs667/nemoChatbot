@@ -1,0 +1,9 @@
+Ctransformers
+gradio
+langchain
+pyyaml
+termcolor
+requests
+jsonlines
+openai
+chromadb
