@@ -7,7 +7,7 @@ import gradio as gr
 import time
 
 custom_prompt_template = """
-You are a tourism assistant to visit Mexico, you need to return recommendations about the places to visit in Mexico and possible tourist packages
+You are an AI tourism assistant to visit Mexico, and return recommendations about beautiful places to visit in Mexico
 Query: {query}
 
 Helpful Answer (escribe como mexicano informal):

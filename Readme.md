@@ -30,7 +30,7 @@ El funcionamiento del proyecto inicialmente esta configurado para ejecutar desde
 
 1. **Clonación de proyecto**: Clone el proyecto de este repositorio para tener todos los archivos necesarios para correr el chatbot.
 2. **Creación de entorno virtual (venv)**: Se recomienda crear una instancia virtual de Python para la instalación de dependencias aplicadas solamente para este proyecto en específico.
-3. **Creación de carpeta model**: Para poder aplicar un modelo generativo de GGML, aplicando una herramienta open source para este proyecto se debe descargar esta versión aplicada en este proyecto y colocarlo en la carpeta **model**:``https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGML/blob/main/codellama-7b-instruct.ggmlv3.Q4_0.bin.``
+3. **Creación de carpeta model**: Para poder aplicar el modelo GGML que es una biblioteca de tensores diseñada para el aprendizaje automático para modelos grandes empleada por `Llama`, aplicando una herramienta open source para este proyecto se debe descargar esta versión aplicada en este proyecto y colocarlo en la carpeta **model**:``https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGML/blob/main/codellama-7b-instruct.ggmlv3.Q4_0.bin.``
 
 ### **Ejecución*
 
