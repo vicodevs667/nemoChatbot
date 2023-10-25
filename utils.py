@@ -1,10 +1,8 @@
 import os
 import sys
-
 import jsonlines
-import yaml
 from langchain.schema import Document
-
+from dotenv import load_dotenv
 
 class DocsJSONLLoader:
     """
@@ -44,6 +42,7 @@ def get_openai_api_key():
     Returns:
         La clave API de OpenAI.
     """
+    # HUGGINGFACEHUB_API_TOKEN = "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"
     openai_api_key = os.getenv("OPENAI_API_KEY")
     if not openai_api_key:
         print("Por favor crea una variable de ambiente OPENAI_API_KEY.")
@@ -51,32 +50,18 @@ def get_openai_api_key():
     return openai_api_key
 
 
-def get_cohere_api_key():
+def get_huggingface_api_key():
     """
-    Obtiene la clave API de Cohere del entorno. Si no está disponible, solicita al usuario que la ingrese.
+    Obtiene la clave API de HuggingFace del entorno. Si no está disponible, solicita al usuario que la ingrese.
 
     Returns:
-        La clave API de Cohere.
+        La clave API de HuggingFace.
     """
-    cohere_api_key = os.getenv("COHERE_API_KEY")
-    if not cohere_api_key:
-        cohere_api_key = input("Por favor ingresa tu COHERE_API_KEY: ")
-    return cohere_api_key
-
-
-def get_file_path():
-    """
-    Obtiene la ruta al archivo de base de datos JSONL especificado en la configuración de la aplicación.
-
-    Returns:
-        La ruta al archivo de base de datos JSONL.
-    """
-    config = load_config()
-
-    root_dir = os.path.dirname(os.path.abspath(__file__))
-    parent_dir = os.path.join(root_dir, "..")
-
-    return os.path.join(parent_dir, config["jsonl_database_path"])
+    load_dotenv()
+    huggingface_api_key = os.getenv('HUGGINGFACEHUB_API_TOKEN')
+    if not huggingface_api_key:
+        huggingface_api_key = input("Por favor ingresa tu COHERE_API_KEY: ")
+    return huggingface_api_key
 
 
 def get_query_from_user() -> str:

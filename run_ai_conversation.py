@@ -6,17 +6,14 @@ from langchain.vectorstores import FAISS
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.llms import CTransformers
-from dotenv import load_dotenv
 import os
 import sys
-from getpass import getpass
 import gradio as gr
 import time
+import utils
 
 
-HUGGINGFACEHUB_API_TOKEN = "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"
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = HUGGINGFACEHUB_API_TOKEN
-
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = utils.get_huggingface_api_key()
 repo_id = "google/flan-t5-large"
 
 loader = DirectoryLoader('data/',

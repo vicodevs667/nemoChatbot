@@ -19,6 +19,11 @@ tiktoken = "^0.4.0"
 openai = "^0.27.8"
 chromadb = "^0.3.26"
 rich = "^13.4.2"
+sentence_transformers = "^2.2.2"
+pypdf = "^3.16.4"
+gradio = "^3.50.2"
+accelerate = "^0.23.0"
+faiss_cpu = "^1.7.4"
 
 [build-system]
 requires = ["poetry-core"]

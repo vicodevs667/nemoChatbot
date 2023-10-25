@@ -7,7 +7,7 @@ from typing import Dict
 import emoji
 import requests
 from termcolor import colored
-from utils import create_dir, load_config, remove_existing_file
+from utils import create_dir, remove_existing_file
 
 
 def preprocess_text(text: str) -> str:
@@ -125,7 +125,7 @@ def main():
     """
     Función principal que se ejecuta cuando se inicia el script.
     """
-    config = load_config()
+    config = ""
     github_token = os.getenv("GITHUB_TOKEN")
 
     if github_token is None:
